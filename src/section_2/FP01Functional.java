@@ -12,6 +12,13 @@ public class FP01Functional {
 		Predicate<Integer> condition = n -> n % 2 == 0;
 		System.out.println("Print Even Numbers:");
 		printAll(numberList, condition);
+		
+		System.out.println("Print Courses:");
+		List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices");
+		courses.stream().forEach(System.out::println);
+		courses.stream()
+			.filter(course -> course.startsWith("Spring"))
+			.forEach(System.out::println);;
 	}
 	
 	private static void printAll(List<Integer> numberList) {
